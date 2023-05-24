@@ -65,21 +65,9 @@ This repository contains a microservice API for timestamp functionality, utilizi
    - The API will return the current time in a JSON object with a unix key:
 
      ```
-     GET /
+     GET / ( empty date parameter )
      ```
 
-     The API will respond with the timestamp object matching the provided ID.
 
-   - To delete a specific stored timestamp object by ID:
-
-     ```
-     DELETE /api/timestamp/:id
-     ```
-
-     Example usage:
-
-     ```
-     DELETE /api/timestamp/609f19c2625e6776d8fc5d88
-     ```
 
      The API will
