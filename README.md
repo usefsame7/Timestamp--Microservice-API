@@ -46,28 +46,40 @@ This repository contains a microservice API for timestamp functionality, utilizi
 
    The API provides several endpoints for timestamp functionality.
 
-   - To convert a date string into Unix and UTC timestamps and store it in the database :
+   - To convert a date string into Unix and UTC timestamps and store it in the database:
 
      ```
      POST /api/:date_string
      ```
 
-     The API will respond with the stored timestamp object :
+     The API will respond with the stored timestamp object:
 
      ```json
      {
-       "_id": "609f19c2625e6776d8fc5d88",
        "unix": 1621824000000,
        "utc": "Mon, 24 May 2021 00:00:00 GMT",
      }
-    ```
-
-  
-   - The API will return the current time in a JSON object with a unix key :
-
-     ```
-     GET /   => empty date parameter
      ```
 
-     
-     ---
+   
+   - The API will return the current time in a JSON object with a unix key:
+
+     ```
+     GET /
+     ```
+
+     The API will respond with the timestamp object matching the provided ID.
+
+   - To delete a specific stored timestamp object by ID:
+
+     ```
+     DELETE /api/timestamp/:id
+     ```
+
+     Example usage:
+
+     ```
+     DELETE /api/timestamp/609f19c2625e6776d8fc5d88
+     ```
+
+     The API will
