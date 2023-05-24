@@ -49,15 +49,7 @@ This repository contains a microservice API for timestamp functionality, utilizi
    - To convert a date string into Unix and UTC timestamps and store it in the database:
 
      ```
-     POST /api/timestamp
-     ```
-
-     Example request body:
-
-     ```json
-     {
-       "dateString": "2021-05-24"
-     }
+     POST /api/:date_string
      ```
 
      The API will respond with the stored timestamp object:
@@ -65,65 +57,17 @@ This repository contains a microservice API for timestamp functionality, utilizi
      ```json
      {
        "_id": "609f19c2625e6776d8fc5d88",
-       "dateString": "2021-05-24",
        "unix": 1621824000000,
        "utc": "Mon, 24 May 2021 00:00:00 GMT",
-       "createdAt": "2023-05-24T10:00:00.000Z"
      }
      ```
 
-   - To retrieve all stored timestamp objects:
+    ```
+    GET  /              =>         (empty date parameter)
+  
+     The API will return the current time in a JSON object with a unix key 
+   
 
-     ```
-     GET /api/timestamp
-     ```
-
-     The API will respond with an array of timestamp objects:
-
-     ```json
-     [
-       {
-         "_id": "609f19c2625e6776d8fc5d88",
-         "dateString": "2021-05-24",
-         "unix": 1621824000000,
-         "utc": "Mon, 24 May 2021 00:00:00 GMT",
-         "createdAt": "2023-05-24T10:00:00.000Z"
-       },
-       {
-         "_id": "609f1a0f625e6776d8fc5d89",
-         "dateString": "2023-05-24",
-         "unix": 1671824000000,
-         "utc": "Wed, 24 May 2023 00:00:00 GMT",
-         "createdAt": "2023-05-24T10:05:00.000Z"
-       }
-     ]
-     ```
-
-   - To retrieve a specific stored timestamp object by ID:
-
-     ```
-     GET /api/timestamp/:id
-     ```
-
-     Example usage:
-
-     ```
-     GET /api/timestamp/609f19c2625e6776d8fc5d88
-     ```
-
-     The API will respond with the timestamp object matching the provided ID.
-
-   - To delete a specific stored timestamp object by ID:
-
-     ```
-     DELETE /api/timestamp/:id
-     ```
-
-     Example usage:
-
-     ```
-     DELETE /api/timestamp/609f19c2625e6776d8fc5d88
-     ```
-
+ 
      The API will
 
