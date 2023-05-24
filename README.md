@@ -62,8 +62,7 @@ This repository contains a microservice API for timestamp functionality, utilizi
      }
      ```
 
-    ```
-    GET  /              =>         (empty date parameter)
+     GET  /    =>   (empty date parameter)
   
      The API will return the current time in a JSON object with a unix key 
    
