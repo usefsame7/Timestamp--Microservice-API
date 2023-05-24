@@ -49,7 +49,7 @@ app.get("/api/:date_string",  (req, res) => {
   });
 
 
-      app.get('/api', (req, res) => {
+      app.get('/', (req, res) => {
           res.json(
             {
               "unix": new Date().getTime(),
