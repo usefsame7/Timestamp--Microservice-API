@@ -60,12 +60,14 @@ This repository contains a microservice API for timestamp functionality, utilizi
        "unix": 1621824000000,
        "utc": "Mon, 24 May 2021 00:00:00 GMT",
      }
-  
-      ```
+    ```
+
+  - The API will return the current time in a JSON object with a unix key:
+     ```
      GET  /    =>   (empty date parameter)
-      ```
+ 
      The API will return the current time in a JSON object with a unix key 
    
-
+     
  
 
